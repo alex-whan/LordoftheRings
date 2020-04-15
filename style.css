@@ -1,0 +1,21 @@
+* {
+    background-color: #CDCED1;
+    color: black;
+}
+
+body {
+}
+
+.li-nav {
+    display: inline;
+    border: solid black 2px;
+    padding: 10px;
+    margin: 20px;
+    width: 50%;
+}
+
+img {
+    border: solid black 2px;
+    display: block ;
+    margin: auto ;
+}
