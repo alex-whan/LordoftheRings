@@ -6,6 +6,13 @@
 body {
 }
 
+.nav {
+    display: inline;
+    margin: auto;
+    align-content: center;
+    text-align: center;
+}
+
 .li-nav {
     display: inline;
     border: solid black 2px;
@@ -18,4 +25,12 @@ img {
     border: solid black 2px;
     display: block ;
     margin: auto ;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
 }
