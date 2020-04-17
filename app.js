@@ -1,24 +1,52 @@
-'use strict';
+//'use strict';
 
 console.log('He lives!');
 
-var isLOTRFan = prompt('Are you a Lord of the Rings fan?').toLowerCase();
+var isFan = 'nope';
 var today = new Date();
 var hourNow = today.getHours();
 var greeting;
 
+/*Needed to to reassign prompt value to "isFan" variable with 
+in the loop below - not up top with the global variables - 
+otherwise it became an endless loop*/
+
+while( (isFan != 'yes') && (isFan != 'no') ){
+    isFan = prompt('Are you a Lord of the Rings fan? (Yes/No)').toLowerCase();
+}
+
 function middleEarthPersona(){
-    if(isLOTRFan === 'yes'){
+    if(isFan === 'yes'){
       var middleEarthName = prompt('What is your Middle-Earth persona?');
       alert('Welcome to Middle-Earth, ' + middleEarthName + '!');
       document.write('<h1>' + 'Welcome to Middle-Earth, ' + middleEarthName + '!')
     }
 
-    else if (isLOTRFan === 'no'){
+    else if (isFan === 'no'){
       var humanName = prompt('What is your human name?');
       alert("Don't worry, " + humanName + ", no one is perfect!");
       document.write('<h1>' + humanName + ', your journey to Middle-Earth, begins here!');
     }
+}
+
+function ringGuessingGame(){
+
+    var correctAnswer = 1;
+
+    for (var i = 0; i < 3; i = i + 1){
+        var numberGuess = prompt('How many rings were there to rule them all?');
+        if(numberGuess == correctAnswer){
+            alert('Are you certain you are not the Dark Lord Sauron Himself?');
+            break;
+        } else {
+            alert('Incorrect. There is only one answer.');
+        }
+        if (i == '2') {
+            alert('The time of the orc has come.');
+            break;
+        }
+    }
+
 }
 
 function middleEarthTime(){
@@ -40,3 +68,4 @@ function middleEarthTime(){
 
 middleEarthPersona();
 middleEarthTime();
+ringGuessingGame();
