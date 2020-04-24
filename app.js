@@ -49,6 +49,7 @@ function ringGuessingGame(){
 
 }
 
+
 function middleEarthTime(){
     if (hourNow > 18) {
         greeting = "It's evening in Middle-Earth!";
